@@ -1,0 +1,5 @@
+require "ffi-compiler/compile_task"
+
+FFI::Compiler::CompileTask.new("http_parser") do |c|
+  c.cflags << "-Wall -Wextra -Werror -O3 -fPIC"
+end
